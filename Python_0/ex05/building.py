@@ -10,6 +10,8 @@ digits and spaces.'''
 
     if len(args) > 1:
         raise AssertionError("more than one argument is provided")
+    # assert len(args) <= 1, "more than one argument is provided"
+
     if len(args) == 0:
         print("What is the text to count?")
         try:
@@ -19,7 +21,7 @@ digits and spaces.'''
     else:
         text = args[0]
 
-    print(f'The text contains {len(text)}')
+    print(f'The text contains {len(text)} characters:')
     upper = lower = punctuation = spaces = digits = 0
     for char in text:
         if char.isupper():
