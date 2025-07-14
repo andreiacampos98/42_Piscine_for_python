@@ -19,8 +19,6 @@ def display_graph(df: pd.DataFrame):
 
 def main():
     df = load("Python_2/life_expectancy_years.csv")
-    print(df.head())
-    print(df[df['country'] == 'Portugal'])
     display_graph(df)
 
 
