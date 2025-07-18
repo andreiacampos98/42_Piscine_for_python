@@ -20,7 +20,7 @@ def whatis():
     if num >= 0:
         print("I'm Even.")
     elif num < 0:
-        print("I'm Odd.")  
+        print("I'm Odd.")
 
 
 whatis()

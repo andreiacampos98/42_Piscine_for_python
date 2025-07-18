@@ -1,4 +1,3 @@
-from whatis import whatis
 import subprocess
 
 
