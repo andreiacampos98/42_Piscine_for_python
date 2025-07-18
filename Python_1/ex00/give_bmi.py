@@ -4,7 +4,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) \
         raise TypeError("Both height and weight must be lists.")
     if len(height) != len(weight):
         raise ValueError("Height and weight lists must have the same length.")
-    
+
     bmi_list = []
     for h, w in zip(height, weight):
         if not isinstance(h, (int, float)) or not isinstance(w, (int, float)):
