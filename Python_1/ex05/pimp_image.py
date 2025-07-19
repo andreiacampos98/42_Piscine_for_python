@@ -53,7 +53,7 @@ def ft_grey(array) -> np.ndarray:
     r = array[:, :, 0].astype(np.int32)
     g = array[:, :, 1].astype(np.int32)
     b = array[:, :, 2].astype(np.int32)
-    
+
     grey_val = (r + g + b) // 3
     grey = np.zeros_like(array)
     grey[:, :, 0] = grey_val
