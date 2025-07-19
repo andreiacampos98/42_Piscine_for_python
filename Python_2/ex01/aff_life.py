@@ -4,6 +4,7 @@ import pandas as pd
 
 
 def display_graph(df: pd.DataFrame):
+    """Take the data and display in a graph"""
     portugal = df[df['country'] == 'Portugal']
     portugal_data = portugal.drop(columns=['country'])
     portugal_data = portugal_data.T.squeeze()
@@ -18,6 +19,10 @@ def display_graph(df: pd.DataFrame):
 
 
 def main():
+    """
+        A program that loads the file life_expectancy_years.csv,
+        and displays the country information of your campus.
+    """
     df = load("Python_2/life_expectancy_years.csv")
     display_graph(df)
 
