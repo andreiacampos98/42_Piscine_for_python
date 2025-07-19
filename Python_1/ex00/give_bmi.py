@@ -1,5 +1,6 @@
 def give_bmi(height: list[int | float], weight: list[int | float]) \
                 -> list[int | float]:
+    """This function calculate the person's bmi (w/(h*h))."""
     if not isinstance(height, list) or not isinstance(weight, list):
         raise TypeError("Both height and weight must be lists.")
     if len(height) != len(weight):
@@ -19,6 +20,7 @@ def give_bmi(height: list[int | float], weight: list[int | float]) \
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """The functions check if the person's bmi is above the limit."""
     if not isinstance(bmi, list):
         raise TypeError("bmi must be a list.")
     if not isinstance(limit, int):
