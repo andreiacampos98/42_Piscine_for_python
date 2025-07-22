@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
-    """Your docstring for Class"""
+    """Your docstring for Character Class"""
     def __init__(self, first_name, is_alive=True):
         """Your docstring for Constructor"""
         self.first_name = first_name
@@ -10,12 +10,12 @@ class Character(ABC):
 
     @abstractmethod
     def die(self):
-        """Your docstring for Method"""
+        """Your docstring for die Method"""
         pass
 
 
 class Stark(Character):
-    """Your docstring for Class"""
+    """Your docstring for Stark Class"""
     def die(self):
-        """Your docstring for Method"""
+        """Your docstring for die Method"""
         self.is_alive = False
