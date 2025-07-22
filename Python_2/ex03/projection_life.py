@@ -4,6 +4,9 @@ from load_csv import load
 
 
 def treat_data_income(df: pd.DataFrame) -> pd.DataFrame:
+    """
+        Treat the data of dataset df_income.
+    """
     df.set_index('country', inplace=True)
     for col in df.columns:
         df[col] = df[col].apply(
@@ -15,27 +18,23 @@ def treat_data_income(df: pd.DataFrame) -> pd.DataFrame:
         )
     df_graph = df['1900']
     df_graph.name = 'gross_domestic_product'
-    print(df.head())
-    print(df.info())
-    print(df.isna())
-    print(df_graph.head())
-    print(df_graph.info())
     return df_graph
 
 
 def treat_data_life(df: pd.DataFrame) -> pd.DataFrame:
+    """
+        Treat the data of dataset df_life.
+    """
     df.set_index('country', inplace=True)
     df_graph = df['1900']
     df_graph.name = 'life_expectancy'
-    print(df.head())
-    print(df.info())
-    print(df.isna())
-    print(df_graph.head())
-    print(df_graph.info())
     return df_graph
 
 
 def display_graph(df: pd.DataFrame):
+    """
+        Take the data and display in a graph
+    """
     plt.figure(figsize=(10, 6))
     plt.scatter(x=df['gross_domestic_product'], y=df['life_expectancy'])
     plt.title("1900")
@@ -46,6 +45,10 @@ def display_graph(df: pd.DataFrame):
 
 
 def main():
+    """
+        A program that displays the projection of life expectancy in relation
+        to the gross national product of the year 1900 for each country.
+    """
     df_income = load(
         "Python_2/income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
     df_life = load(
@@ -55,7 +58,6 @@ def main():
     df_final = pd.concat([df_graph_income, df_graph_life], axis=1)
     df_final.columns = ['gross_domestic_product', 'life_expectancy']
     display_graph(df_final)
-    print(df_final.head())
 
 
 if __name__ == "__main__":
