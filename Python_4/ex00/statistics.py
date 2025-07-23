@@ -1,8 +1,14 @@
 def ft_mean(args: tuple):
+    """
+    The function accepts a tupple and calculate the mean.
+    """
     return sum(args)/len(args)
 
 
 def ft_median(args: tuple):
+    """
+    The function accepts a tupple and calculate the median.
+    """
     list_args = sorted(args)
     count = len(list_args)
     mid = count // 2
@@ -13,19 +19,25 @@ def ft_median(args: tuple):
 
 
 def ft_var(args: tuple):
+    """
+    The function accepts a tupple and calculate the variance.
+    """
     mean = ft_mean(args)
     new_list = [(x - mean)**2 for x in args]
     return (sum(new_list)/len(new_list))
 
 
 def ft_std(args: tuple):
-    if not args:
-        print("ERROR")
-        return
+    """
+    The function accepts a tupple and calculate the mean.
+    """
     return (ft_var(args) ** 0.5)
 
 
 def ft_quartile(args: tuple):
+    """
+    The function accepts a tupple and calculate the quartile.
+    """
     list_args = sorted(args)
     count = len(list_args)
     q_1 = count // 4
@@ -42,6 +54,9 @@ def ft_quartile(args: tuple):
 
 
 def ft_statistics(*args, **kwargs) -> None:
+    """
+    The function calculate the statistics.
+    """
     if not args:
         for _ in kwargs:
             print("ERROR")
