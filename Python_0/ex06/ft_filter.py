@@ -6,8 +6,9 @@ def is_even(n):
 
 
 def ft_filter(function=None, iterable=None):
-    """Return an iterator yielding those items of iterable for which function
-    (item) is true. If function is None, return the items that are true."""
+    """filter(function or None, iterable) --> filter object\n
+Return an iterator yielding those items of iterable for which function(item)
+is true. If function is None, return the items that are true."""
     if iterable is None:
         raise ValueError("You must provide an iterable")
     if function is None:
@@ -16,10 +17,10 @@ def ft_filter(function=None, iterable=None):
         return [x for x in iterable if function(x)]
 
 
-# result1 = filter(is_even, numbers)
-# result3 = ft_filter(is_even, numbers)
-# print(list(result1))
-# print(list(result3))
+print(ft_filter.__doc__)
+print("############################")
+print(filter.__doc__)
+
 
 # result2 = filter(None, numbers)
 # result4 = ft_filter(None, numbers)
