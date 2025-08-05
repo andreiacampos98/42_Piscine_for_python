@@ -17,9 +17,9 @@ def whatis():
         print("AssertionError: argument is not an integer")
         return
 
-    if num >= 0:
+    if num % 2 == 0:
         print("I'm Even.")
-    elif num < 0:
+    else:
         print("I'm Odd.")
 
 

@@ -17,9 +17,9 @@ is true. If function is None, return the items that are true."""
         return [x for x in iterable if function(x)]
 
 
-print(ft_filter.__doc__)
-print("############################")
-print(filter.__doc__)
+# print(ft_filter.__doc__)
+# print("############################")
+# print(filter.__doc__)
 
 
 # result2 = filter(None, numbers)

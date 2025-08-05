@@ -14,7 +14,7 @@ digits and spaces.'''
     if len(args) == 0:
         print("What is the text to count?")
         try:
-            text = input()
+            text = sys.stdin.read()
         except EOFError:
             return
     else:
