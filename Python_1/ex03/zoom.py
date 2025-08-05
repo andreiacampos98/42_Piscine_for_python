@@ -7,8 +7,6 @@ def ft_zoom(picture: np.ndarray):
     """The functions takes the pixels of a picture and zoom in."""
     try:
         new_array = picture[100:500, 400:800]
-        if new_array.ndim == 3 and new_array.shape[2] == 3:
-            new_array = new_array.mean(axis=2, keepdims=True).astype(np.uint8)
         print(f"New shape after slicing: {new_array.shape}")
         print(new_array)
         return new_array
